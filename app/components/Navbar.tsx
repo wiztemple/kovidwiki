@@ -17,9 +17,9 @@ const Navbar = () => {
   };
 
   const textClass = `uppercase text-sm text-[#8289A6] block px-2 hover:bg-white hover:text-[#454E5E] py-2 rounded hover:shadow-menuShadow`;
-  const buttonClass = `flex items-center gap-x-3 px-3 py-2 text-[#2C3E50] font-medium text-sm border border-[#F1F4FA] rounded-[10px] hover:bg-[#FAF9F9] hover:border-[#FAF9F9]`;
+  const buttonClass = `flex items-center gap-x-3 sm:w-fit w-full px-3 py-2 text-[#2C3E50] font-medium text-sm border border-[#F1F4FA] rounded-[10px] hover:bg-[#FAF9F9] hover:border-[#FAF9F9]`;
   return (
-    <nav className="flex justify-between items-center w-full shadow-xs sm:px-20 px-5 h-[56px] shadow-headerShadow">
+    <nav className="sm:flex justify-between items-center w-full shadow-xs sm:px-20 px-5 sm:h-[56px] sm:py-0 py-2 shadow-headerShadow">
       <div className="flex rounded bg-[#F7F9FD] items-center py-1 px-2">
         <Link href="/" className={`${textClass} ${getLinkClass("/")}`}>
           Worldwide
@@ -40,7 +40,7 @@ const Navbar = () => {
           USA
         </Link>
       </div>
-      <div className="flex items-center gap-x-3">
+      <div className="flex items-center gap-x-3 sm:mt-0 mt-2">
         <button className={buttonClass} type="button" onClick={handleRefresh}>
           <svg
             width="14"

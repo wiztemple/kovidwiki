@@ -7,7 +7,7 @@ import ArrowRightIcon from "../icons/ArrowRight";
 interface CountryCardProps {
   country: string;
   statsValue: number;
-  flag: string; // Optional flag URL
+  flag: string;
   onClick: () => void;
 }
 
@@ -22,7 +22,7 @@ const StateCard: React.FC<CountryCardProps> = ({
   return (
     <button
       type="button"
-      className="bg-white rounded-[5px] p-3 hover:bg-[#F8F8F8]/80 hover:shadow transition-colors duration-200 ease-in-out"
+      className="bg-[#F8F8F8]/80 rounded-[5px] p-3 hover:bg-white hover:shadow transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in"
       onClick={onClick}
     >
       <div className="flex justify-between">

@@ -10,10 +10,11 @@ import usStateFlags from "../utils/useStateFlags";
 interface DrawerProps {
   isOpen: boolean;
   onClose: () => void;
+  isLoading: boolean;
   countryData: any; // Define a more specific type based on your data structure
 }
 
-const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, countryData }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, countryData, isLoading }) => {
   const isState = usStateFlags.hasOwnProperty(countryData?.state);
   const flagUrl = isState
     ? usStateFlags[countryData?.state]
@@ -106,6 +107,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, countryData }) => {
             statsValue={countryData?.todayCases ?? 0}
             statsValue1={countryData?.todayRecovered ?? 0}
             statsValue2={countryData?.todayDeaths ?? 0}
+            isLoading={isLoading}
           />
           <StatsCard2
             title="Cases Per Million"
@@ -114,6 +116,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, countryData }) => {
             statsValue={countryData?.casesPerOneMillion ?? 0}
             statsValue1={countryData?.activePerOneMillion ?? 0}
             statsValue2={countryData?.criticalPerOneMillion ?? 0}
+            isLoading={isLoading}
           />
           <StatsCard2
             title="Tests Per Million"
@@ -122,6 +125,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, countryData }) => {
             statsValue={countryData?.testsPerOneMillion ?? 0}
             statsValue1={countryData?.recoveredPerOneMillion ?? 0}
             statsValue2={countryData?.deathsPerOneMillion ?? 0}
+            isLoading={isLoading}
           />
         </div>
       </div>

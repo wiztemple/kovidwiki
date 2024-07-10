@@ -22,7 +22,7 @@ const CountryCard: React.FC<CountryCardProps> = ({
   return (
     <button
       type="button"
-      className="bg-white rounded-[5px] border border-[#F1F4FA] p-3 hover:bg-[#F8F8F8] transition-colors duration-200 ease-in-out"
+      className="bg-white rounded-[5px] border border-[#F1F4FA] p-3 hover:bg-[#F8F8F8] transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in"
       onClick={onClick}
     >
       <div className="flex justify-between">

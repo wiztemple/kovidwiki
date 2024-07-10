@@ -19,7 +19,7 @@ const GlobalCovidStats: React.FC = () => {
       <h1 className="text-2xl pt-3 pb-2 font-semibold text-[#1E272F]">
         Global Updates
       </h1>
-      <div className="grid sm:grid-cols-6 grid-cols-1 p-2 border border-[#EAEFF1] gap-3 rounded-lg">
+      <div className="grid sm:grid-cols-6 grid-cols-1 p-2 border border-[#EAEFF1] gap-3 rounded-lg transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in">
         <StatsCard
           title="Total Cases"
           statsValue={data?.cases ?? 0}
@@ -63,7 +63,7 @@ const GlobalCovidStats: React.FC = () => {
           isLoading={isLoading}
         />
       </div>
-      <div className="grid grid-cols-2 gap-5 rounded-lg mt-5">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 rounded-lg mt-5">
         <StatsCard2
           title="Today Cases 😔"
           title1="Today Recovered"
@@ -71,6 +71,7 @@ const GlobalCovidStats: React.FC = () => {
           statsValue={data?.todayCases ?? 0}
           statsValue1={data?.todayRecovered ?? 0}
           statsValue2={data?.todayDeaths ?? 0}
+          isLoading={isLoading}
         />
         <StatsCard2
           title="Cases Per Million"
@@ -79,6 +80,7 @@ const GlobalCovidStats: React.FC = () => {
           statsValue={data?.casesPerOneMillion ?? 0}
           statsValue1={data?.activePerOneMillion ?? 0}
           statsValue2={data?.criticalPerOneMillion ?? 0}
+          isLoading={isLoading}
         />
         <StatsCard2
           title="Tests Per Million"
@@ -87,6 +89,7 @@ const GlobalCovidStats: React.FC = () => {
           statsValue={data?.testsPerOneMillion ?? 0}
           statsValue1={data?.recoveredPerOneMillion ?? 0}
           statsValue2={data?.deathsPerOneMillion ?? 0}
+          isLoading={isLoading}
         />
       </div>
     </div>

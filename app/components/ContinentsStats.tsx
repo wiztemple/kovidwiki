@@ -94,6 +94,7 @@ const ContinentsStats = () => {
           statsValue={data?.todayCases ?? 0}
           statsValue1={data?.todayRecovered ?? 0}
           statsValue2={data?.todayDeaths ?? 0}
+          isLoading={isLoading}
         />
         <StatsCard2
           title="Cases Per Million"
@@ -102,6 +103,7 @@ const ContinentsStats = () => {
           statsValue={data?.casesPerOneMillion ?? 0}
           statsValue1={data?.activePerOneMillion ?? 0}
           statsValue2={data?.criticalPerOneMillion ?? 0}
+          isLoading={isLoading}
         />
         <StatsCard2
           title="Tests Per Million"
@@ -110,6 +112,7 @@ const ContinentsStats = () => {
           statsValue={data?.testsPerOneMillion ?? 0}
           statsValue1={data?.recoveredPerOneMillion ?? 0}
           statsValue2={data?.deathsPerOneMillion ?? 0}
+          isLoading={isLoading}
         />
       </div>
       </div>
