@@ -22,7 +22,9 @@ const CountriesStats = () => {
 
   return (
     <div className="sm:px-20 px-5">
-      <h1>Countries</h1>
+       <h1 className="text-2xl pt-3 pb-2 font-semibold text-[#1E272F]">
+      All Countries Update
+      </h1>
       <div className="grid sm:grid-cols-5 grid-cols-1 gap-4">
         {data?.map((country) => (
           <CountryCard

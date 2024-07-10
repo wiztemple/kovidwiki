@@ -22,20 +22,39 @@ const StateCard: React.FC<CountryCardProps> = ({
   return (
     <button
       type="button"
-      className="bg-white rounded-[5px] border border-[#F1F4FA] p-3 hover:bg-[#F8F8F8] transition-colors duration-200 ease-in-out"
+      className="bg-white rounded-[5px] p-3 hover:bg-[#F8F8F8]/80 hover:shadow transition-colors duration-200 ease-in-out"
       onClick={onClick}
     >
       <div className="flex justify-between">
-        <h3 className="text-sm font-medium text-[#2C3E50]">{country}</h3>
-        {flag ? <img src={flag} alt={`${country} flag`} className="h-7 w-10 rounded" /> : null}
+        <div className="flex flex-col">
+          {flag ? (
+            <img
+              src={flag}
+              alt={`${country} flag`}
+              className="h-8 w-12 rounded object-cover"
+            />
+          ) : null}
+          <h3 className="text-xs font-medium text-[#3B4161] uppercase pt-1">
+            {country}
+          </h3>
+        </div>
+        <div className="border-l-2 border-l-slate-100 h-fit">
+          <span className="text-left text-xs block text-[#3B4161] ml-2">
+            Total Cases
+          </span>
+          <p className="text-lg font-semibold text-[#233547] text-left ml-2">
+            {formattedValue}
+          </p>
+        </div>
       </div>
-      <span className="text-left text-xs block">Active Cases</span>
-      <p className="text-xl font-semibold py-1.5 text-[#233547] text-left">
-        {formattedValue}
-      </p>
-      <div className="flex w-full justify-between items-center">
-        <span className="text-[#A0A4B6] text-[11px] block">{formatDate(today)}</span>
-        <button type="button" className="h-[30px] w-[30px] rounded-full bg-[#F8F8F8] flex justify-center items-center border-2 border-[#F1F4FA] hover:bg-white">
+      <div className="flex w-full justify-between items-center pt-5">
+        <span className="text-[#A0A4B6] text-[11px] block">
+          {formatDate(today)}
+        </span>
+        <button
+          type="button"
+          className="h-[30px] w-[30px] rounded-full bg-[#F8F8F8] flex justify-center items-center border-2 border-[#F1F4FA] hover:bg-white"
+        >
           <ArrowRightIcon />
         </button>
       </div>
