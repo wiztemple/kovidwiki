@@ -32,7 +32,7 @@ const USAStats = () => {
               key={state.state}
               country={state?.state ?? ""}
               statsValue={state?.cases ?? 0}
-              flag={flagUrl}
+              flag={flagUrl ?? ''}
               onClick={() => handleCountryClick(state)}
             />
           );
