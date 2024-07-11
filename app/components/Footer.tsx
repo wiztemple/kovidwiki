@@ -3,7 +3,7 @@ import SlantedArrowIcon from "../icons/SlantedArrowIcon";
 
 const Footer = () => {
   return (
-    <footer className="sm:py-5">
+    <footer className="py-5">
       <div className="grid sm:grid-cols-3 sm:px-20 px-5 w-full">
         <div>
           <Link href="/" className="block">
