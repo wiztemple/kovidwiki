@@ -5,7 +5,7 @@ import { useUSACovidStats } from "../hooks/dataQuery";
 import Drawer from "./Drawer";
 import StateCard from "./StateCard";
 import usStateFlags from "../utils/useStateFlags";
-import LoadingState from "./LoaingState";
+import LoadingState from "./LoadingState";
 
 const USAStats = () => {
   const { data, isLoading } = useUSACovidStats();

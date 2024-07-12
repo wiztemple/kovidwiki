@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SlantedArrowIcon from "../icons/SlantedArrowIcon";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className="grid sm:grid-cols-3 sm:px-20 px-5 w-full">
         <div>
           <Link href="/" className="block">
-            Tracker
+          <Image src={"/logo.svg"} alt="logo" width={131} height={31} />
           </Link>
           <h1 className="text-4xl text-[#343A45] font-bold sm:pt-10 pt-5">
             Need help with <br /> anything?
