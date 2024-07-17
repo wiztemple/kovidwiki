@@ -16,10 +16,10 @@ const GlobalCovidStats: React.FC = () => {
 
   return (
     <div className="sm:px-20 px-5">
-      <h1 className="text-2xl pt-3 pb-2 font-semibold text-[#1E272F]">
+      <h1 className="text-2xl pt-3 pb-2 font-semibold text-[#1E272F] dark:text-slate-300">
         Global Updates
       </h1>
-      <div className="grid sm:grid-cols-6 grid-cols-1 p-2 border border-[#EAEFF1] gap-3 rounded-lg transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in">
+      <div className="grid sm:grid-cols-6 grid-cols-1 p-2 border border-[#EAEFF1] dark:border dark:border-gray-800 gap-3 rounded-lg transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in">
         <StatsCard
           title="Total Cases"
           statsValue={data?.cases ?? 0}

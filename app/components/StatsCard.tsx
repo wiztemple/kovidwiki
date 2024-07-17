@@ -17,14 +17,14 @@ const StatsCard: React.FC<StatsCardProps> = ({
 }) => {
   const formattedValue = new Intl.NumberFormat().format(statsValue);
   return (
-    <div className="bg-white rounded-lg border border-[#E7E9F2] p-3 h-[105px] transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in">
+    <div className="bg-white dark:bg-[#090f28] rounded-lg border border-[#E7E9F2] dark:border dark:border-gray-800 p-3 h-[105px] transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in">
       <div className="flex justify-between">
-        <h3 className="text-sm font-medium text-[#2C3E50]">{title}</h3>
+        <h3 className="text-sm font-medium text-[#2C3E50] dark:text-[#777F8D]">{title}</h3>
         <div className={`p-3 rounded-full ${iconBgColor}`}>{icon}</div>
       </div>
       {isLoading ? (
         <div className="h-2 bg-slate-200 rounded animate-pulse mt-5"></div>
-      ):(<p className="text-2xl font-semibold py-1.5 text-[#233547]">{formattedValue}</p>)}
+      ):(<p className="text-2xl font-semibold py-1.5 text-[#233547] dark:text-slate-400">{formattedValue}</p>)}
     </div>
   );
 };

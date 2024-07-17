@@ -2,7 +2,7 @@ const ArrowRightIcon = () => {
   return (
     <svg
       width="14"
-      className="fill-current"
+      className="fill-current dark:fill-slate-400"
       height="10"
       viewBox="0 0 14 10"
       fill="none"

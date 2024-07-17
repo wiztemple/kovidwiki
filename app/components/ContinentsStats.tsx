@@ -38,11 +38,11 @@ const ContinentsStats = () => {
           </button>
         ))}
       </div>
-      <h1 className="text-2xl pt-3 pb-2 font-semibold text-[#1E272F] capitalize">
+      <h1 className="text-2xl pt-3 pb-2 font-semibold text-[#1E272F] dark:text-slate-300 capitalize">
         {activeTab} COVID Updates
       </h1>
       <div className="py-2">
-        <div className="grid sm:grid-cols-6 grid-cols-1 p-2 border border-[#EAEFF1] gap-3 rounded-lg">
+        <div className="grid sm:grid-cols-6 grid-cols-1 p-2 border border-[#EAEFF1] dark:border dark:border-gray-800 gap-3 rounded-lg">
           <StatsCard
             title="Total Cases"
             statsValue={data?.cases ?? 0}

@@ -22,11 +22,11 @@ const CountryCard: React.FC<CountryCardProps> = ({
   return (
     <button
       type="button"
-      className="bg-white rounded-[5px] border border-[#F1F4FA] p-3 hover:bg-[#F8F8F8] transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in"
+      className="bg-white dark:bg-[#090f28] rounded-[5px] border border-[#F1F4FA] dark:border dark:border-gray-800  p-3 hover:bg-[#F8F8F8] transform transition-transform duration-500 ease-in-out opacity-0 animate-slide-in"
       onClick={onClick}
     >
       <div className="flex justify-between">
-        <h3 className="text-sm font-medium text-[#2C3E50]">{country}</h3>
+        <h3 className="text-sm font-medium text-[#2C3E50] dark:text-[#777F8D]">{country}</h3>
         <Image
           src={flag}
           className="rounded"
@@ -36,12 +36,12 @@ const CountryCard: React.FC<CountryCardProps> = ({
         />
       </div>
       <span className="text-left text-xs block text-[#727993] pt-2">Total Cases</span>
-      <p className="text-xl font-semibold text-[#233547] text-left">
+      <p className="text-xl font-semibold text-[#233547] text-left dark:text-slate-400">
         {formattedValue}
       </p>
       <div className="flex w-full justify-between items-center">
-        <span className="text-[#A0A4B6] text-[11px] block">{formatDate(today)}</span>
-        <button type="button" className="h-[30px] w-[30px] rounded-full bg-[#F8F8F8] flex justify-center items-center border-2 border-[#F1F4FA] hover:bg-white">
+        <span className="text-[#A0A4B6] text-[11px] dark:text-[#535965] block">{formatDate(today)}</span>
+        <button type="button" className="h-[30px] w-[30px] rounded-full bg-[#F8F8F8] dark:bg-[#070e29] flex justify-center items-center border-2 border-[#F1F4FA] dark:border-slate-900 hover:bg-white">
           <ArrowRightIcon />
         </button>
       </div>
